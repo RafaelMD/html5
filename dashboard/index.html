@@ -67,6 +67,7 @@
                   <th># Original</th>
                   <th>Descrição</th>
                   <th>-</th>
+				  <th>-</th>
                 </tr>
               </thead>
               <tbody>
@@ -74,14 +75,15 @@
                   <td>{{product.numeroJcrei}}</td>
                   <td>{{product.numeroOriginal}}</td>
                   <td>{{product.descricao}}</td>
-                  <td>-</td>
+                  <td><a href="#" ng-click="products.edit(product.numeroJcrei);" >Editar</a></td>
+				  <td><a href="#" ng-click="products.delete(product.numeroJcrei);" >Excluir</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       
-		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-show="menu.current === 3" ng-controller="productFormCtrl as productForm">
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-show="menu.current === 2 || menu.current === 3" ng-controller="productFormCtrl as productForm">
 			<h1 class="page-header" ng-show="productForm.add" >Adicionar Peça</h1>
 			<h1 class="page-header" ng-hide="productForm.add" >Editar Peça</h1>
 		
