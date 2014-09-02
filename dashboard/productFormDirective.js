@@ -17,7 +17,8 @@
 			},
 			controller: function($scope) {
 				this.save = function(){
-					console.log($scope.peca);
+					console.log($scope);
+					!$scope.edit && $rootScope.$emit('addProduct', $scope.peca);
 				};
 			},
 			controllerAs: "form"

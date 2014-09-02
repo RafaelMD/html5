@@ -14,6 +14,10 @@
 		productCtrl.delete = function(_peca){
 			var ok = confirm("Deletar ?");
 		};
+		
+		$rootScope.$on('addProduct', function(event, _peca){
+			productCtrl.list.push(_peca);
+		});
 	});
 	
 })();
