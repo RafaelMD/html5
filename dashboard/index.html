@@ -84,51 +84,26 @@
         </div>
       
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-show="menu.current === 2 " ng-controller="productFormCtrl as productForm">
-			asd
-				<fieldset>
-
-				<!-- Form Name -->
-				<legend>Adicionar Peça</legend>
-
-				<!-- Text input-->
-				<div class="control-group">
-				  <label class="control-label" for="numeroJcrei">Nº JCREI</label>
-				  <div class="controls">
-					<input id="numeroJcrei" name="numeroJcrei" placeholder="Número JCREI" class="input-xlarge" required="" type="text">
-					
-				  </div>
+			<h1 class="page-header" >Adicionar Peça</h1>
+			<form class="form-horizontal" role="form">
+			  <div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-3">
+				  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
 				</div>
-
-				<!-- Button Drop Down -->
-				<div class="control-group">
-				  <label class="control-label" for="buttondropdown">Marca</label>
-				  <div class="controls">
-					<div class="input-append">
-					  <input id="buttondropdown" name="buttondropdown" class="input-xlarge" placeholder="Marca" required="" type="text">
-					  <div class="btn-group">
-						<button class="btn dropdown-toggle" data-toggle="dropdown">
-						  Escolher
-						  <span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu">
-						  <li><a href="#">Option one</a></li>
-						  <li><a href="#">Option two</a></li>
-						  <li><a href="#">Option three</a></li>
-						</ul>
-					  </div>
-					</div>
-				  </div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-3">
+				  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
 				</div>
-
-				<!-- Button -->
-				<div class="control-group">
-				  <label class="control-label" for="concluir"></label>
-				  <div class="controls">
-					<button id="concluir" name="concluir" class="btn btn-success">Concluir</button>
-				  </div>
+			  </div>
+			  
+			  <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-3">
+				  <button type="submit" class="btn btn-default btn-success">Concluir</button>
 				</div>
-
-				</fieldset>
+			  </div>
 			</form>
 		</div>
 		

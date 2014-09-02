@@ -24,6 +24,10 @@
 		productCtrl.edit = function(_numeroJcrei){
 			$rootScope.$emit('changePage',3);
 		};
+		
+		productCtrl.delete = function(_numeroJcrei){
+			var ok = confirm("Deletar ?");
+		};
 	});
 	
 	app.controller("productFormCtrl", function($http, $rootScope){
