@@ -23,6 +23,7 @@
     <![endif]-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+	<script src="http://underscorejs.org/underscore-min.js"></script>
 	<script src="app.js"></script>
 	<script src="menuController.js"></script>
 	<script src="productController.js"></script>
@@ -59,31 +60,9 @@
           </ul>
         </div>
 		
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-show="menu.current === 1" ng-controller="productCtrl as products">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-show="menu.current === 1" >
           <h1 class="page-header">Peças</h1>
-          
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th># JCREI</th>
-                  <th># Original</th>
-                  <th>Descrição</th>
-                  <th>-</th>
-				  <th>-</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="product in products.list" >
-                  <td>{{product.numeroJcrei}}</td>
-                  <td>{{product.numeroOriginal}}</td>
-                  <td>{{product.descricao}}</td>
-                  <td><a href="#" ng-click="products.edit(product);" >Editar</a></td>
-				  <td><a href="#" ng-click="products.delete(product);" >Excluir</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+		  <ng-include  src="'list-product.html'"></ng-include>
         </div>
       
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-show="menu.current === 2 ">

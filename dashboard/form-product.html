@@ -2,44 +2,39 @@
 <form class="form-horizontal" role="form">
 
   <div class="form-group">
-	<label for="numeroJcrei" class="col-sm-2 control-label">Nº JCREI</label>
+	<label for="codigoJcrei" class="col-sm-2 control-label">Nº JCREI</label>
 	<div class="col-sm-3">
-	  <input type="text" class="form-control" id="numeroJcrei" placeholder="Número JCREI" ng-model="peca.numeroJcrei">
+	  <input type="text" class="form-control" id="codigoJcrei" placeholder="Número JCREI" ng-model="peca.codigoJcrei"  ng-disabled="edit">
 	</div>
   </div>
   
   <div class="form-group">
-	<label for="marca" class="col-sm-2 control-label">Marca</label>
+	<label for="marcaId" class="col-sm-2 control-label">Marca</label>
 	<div class="col-sm-3" >
-		<select class="form-control" id="marca" >
-		  <option>1</option>
-		  <option>2</option>
-		  <option>3</option>
-		  <option>4</option>
+		<select class="form-control" id="marca" ng-model="peca.marcaId">
+		  <option value="1">Scania</option>
+		  <option value="2">Volvo</option>
+		  <option value="3">Mercedes</option>
+		  <option value="4">Iveco</option>
+		  <option value="5">Volkswagen</option>
 		</select>
 	</div>
   </div>
   
   <div class="form-group">
-	<label for="numeroOriginal1" class="col-sm-2 control-label">Nº Originais</label>
+	<label for="codigoOriginal1" class="col-sm-2 control-label">Nº Originais</label>
 	<div class="col-sm-3">
-	  <input type="text" class="form-control" id="numeroOriginal1" placeholder="Número Original 1" ng-model="peca.numeroOriginal">
+	  <input type="text" class="form-control" id="codigoOriginal1" placeholder="Número Original 1" ng-model="peca.codigoOriginal1">
 	</div>
   </div>
   
   <div class="form-group">
-	<label for="numeroOriginal2" class="col-sm-2 control-label"></label>
+	<label for="codigoOriginal2" class="col-sm-2 control-label"></label>
 	<div class="col-sm-3">
-	  <input type="text" class="form-control" id="numeroOriginal2" placeholder="Número Original 2" ng-model="peca.numeroOriginal">
+	  <input type="text" class="form-control" id="codigoOriginal2" placeholder="Número Original 2" ng-model="peca.codigoOriginal2">
 	</div>
   </div>
   
-  <div class="form-group">
-	<label for="numeroOriginal3" class="col-sm-2 control-label"></label>
-	<div class="col-sm-3">
-	  <input type="text" class="form-control" id="numeroOriginal3" placeholder="Número Original 3" ng-model="peca.numeroOriginal">
-	</div>
-  </div>
   
   <div class="form-group">
 	<label for="descricao" class="col-sm-2 control-label">Descrição</label>
@@ -53,6 +48,13 @@
 	<div class="col-sm-4">
 	  <textarea class="form-control" id="aplicacao" rows="3" ng-model="peca.aplicacao"></textarea>
 	</div>
+  </div>
+  
+  <div class="form-group" ng-show="edit">
+    <label class="col-sm-2 control-label">Vezes pesquisado</label>
+    <div class="col-sm-10">
+      <p class="form-control-static">{{peca.vezesPesquisado}} <i>(nos últimos 3 meses)</i></p>
+    </div>
   </div>
   
   <div class="form-group">

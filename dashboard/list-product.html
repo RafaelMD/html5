@@ -1,0 +1,24 @@
+﻿<div class="table-responsive" ng-controller="productCtrl as products">
+<table class="table table-striped">
+  <thead>
+	<tr>
+	  <th># JCREI</th>
+	  <th># Original</th>
+	  <th>Descrição</th>
+	  <th></th>
+	  <th></th>
+	  <th></th>
+	</tr>
+  </thead>
+  <tbody>
+	<tr ng-repeat="product in products.list" >
+	  <td>{{product.codigoJcrei}}</td>
+	  <td>{{product.codigoOriginal1}}</td>
+	  <td>{{product.descricao}}</td>
+	  <td><a href="#" ng-click="products.openEditForm(product);" ><span class="glyphicon glyphicon-pencil"></span></a></td>
+	  <td><a href="#" ng-click="products.openPictureForm(product);" ><span class="glyphicon glyphicon-picture"></span></a> </td>
+	  <td><a href="#" ng-click="products.delete(product);" ><span class="glyphicon glyphicon-trash"></span></a> </td>
+	</tr>
+  </tbody>
+</table>
+</div>
