@@ -30,12 +30,17 @@
 		};
 	});
 	
-	app.controller("productFormCtrl", function($http, $rootScope){
-		var form = this;
-	});
-	
-	app.controller("productEditCtrl", function($http, $rootScope){
-		var editForm = this;
+	app.directive("productForm", function(){
+		return {
+			restrict: 'E',
+			scope: true,
+			templateUrl: "form-product.html",
+			link: function (scope, element, attr) {
+				console.log(attr);
+				scope.tittle = attr.title;
+				scope.edit = attr.edit;
+			}
+		};
 	});
 	
 })();
