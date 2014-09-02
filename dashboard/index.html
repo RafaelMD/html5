@@ -83,11 +83,59 @@
           </div>
         </div>
       
-		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-show="menu.current === 2 || menu.current === 3" ng-controller="productFormCtrl as productForm">
-			<h1 class="page-header" ng-show="productForm.add" >Adicionar Peça</h1>
-			<h1 class="page-header" ng-hide="productForm.add" >Editar Peça</h1>
-		
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-show="menu.current === 2 " ng-controller="productFormCtrl as productForm">
+			<form class="form-horizontal">
+				<fieldset>
+
+				<!-- Form Name -->
+				<legend>Adicionar Peça</legend>
+
+				<!-- Text input-->
+				<div class="control-group">
+				  <label class="control-label" for="numeroJcrei">Nº JCREI</label>
+				  <div class="controls">
+					<input id="numeroJcrei" name="numeroJcrei" placeholder="Número JCREI" class="input-xlarge" required="" type="text">
+					
+				  </div>
+				</div>
+
+				<!-- Button Drop Down -->
+				<div class="control-group">
+				  <label class="control-label" for="buttondropdown">Marca</label>
+				  <div class="controls">
+					<div class="input-append">
+					  <input id="buttondropdown" name="buttondropdown" class="input-xlarge" placeholder="Marca" required="" type="text">
+					  <div class="btn-group">
+						<button class="btn dropdown-toggle" data-toggle="dropdown">
+						  Escolher
+						  <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						  <li><a href="#">Option one</a></li>
+						  <li><a href="#">Option two</a></li>
+						  <li><a href="#">Option three</a></li>
+						</ul>
+					  </div>
+					</div>
+				  </div>
+				</div>
+
+				<!-- Button -->
+				<div class="control-group">
+				  <label class="control-label" for="concluir"></label>
+				  <div class="controls">
+					<button id="concluir" name="concluir" class="btn btn-success">Concluir</button>
+				  </div>
+				</div>
+
+				</fieldset>
+			</form>
 		</div>
+		
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-show="menu.current === 3" ng-controller="productEditCtrl as productEdit">
+			<h1 class="page-header" >Editar Peça</h1>
+		</div>
+		
 	  </div>
     </div>
 

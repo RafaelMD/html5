@@ -4,7 +4,7 @@
 	app.controller("menuCtrl", function($rootScope){
 		var menuCtrl = this;
 		menuCtrl.current = 1;
-		menuCtrl.pages = [{name:"Peças",id:1},{name:"Adicionar Peça", id:3}];
+		menuCtrl.pages = [{name:"Peças",id:1},{name:"Adicionar Peça", id:2}];
 		menuCtrl.changePage = function(_page){
 			menuCtrl.current = _page;
 		};
@@ -22,21 +22,16 @@
 		});
 		
 		productCtrl.edit = function(_numeroJcrei){
-			$rootScope.$emit('changePage',2);
-			$rootScope.$emit('editProduct');
-		}
+			$rootScope.$emit('changePage',3);
+		};
 	});
 	
 	app.controller("productFormCtrl", function($http, $rootScope){
 		var form = this;
-		form.add = true;
-		
-		$rootScope.$on('editProduct', function(event){
-            form.add = false;
-        });
-		
-		$rootScope.$on('addProduct', function(event){
-            form.add = true;
-        });
 	});
+	
+	app.controller("productEditCtrl", function($http, $rootScope){
+		var editForm = this;
+	});
+	
 })();
