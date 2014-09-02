@@ -1,10 +1,10 @@
-﻿<h1 class="page-header" >{{tittle}}</h1>
+﻿<h1 class="page-header" >{{title}}</h1>
 <form class="form-horizontal" role="form">
 
   <div class="form-group">
 	<label for="numeroJcrei" class="col-sm-2 control-label">Nº JCREI</label>
 	<div class="col-sm-3">
-	  <input type="text" class="form-control" id="numeroJcrei" placeholder="Número JCREI">
+	  <input type="text" class="form-control" id="numeroJcrei" placeholder="Número JCREI" ng-model="peca.numeroJcrei">
 	</div>
   </div>
   
@@ -23,41 +23,41 @@
   <div class="form-group">
 	<label for="numeroOriginal1" class="col-sm-2 control-label">Nº Originais</label>
 	<div class="col-sm-3">
-	  <input type="text" class="form-control" id="numeroOriginal1" placeholder="Número Original 1">
+	  <input type="text" class="form-control" id="numeroOriginal1" placeholder="Número Original 1" ng-model="peca.numeroOriginal">
 	</div>
   </div>
   
   <div class="form-group">
 	<label for="numeroOriginal2" class="col-sm-2 control-label"></label>
 	<div class="col-sm-3">
-	  <input type="text" class="form-control" id="numeroOriginal2" placeholder="Número Original 2">
+	  <input type="text" class="form-control" id="numeroOriginal2" placeholder="Número Original 2" ng-model="peca.numeroOriginal">
 	</div>
   </div>
   
   <div class="form-group">
 	<label for="numeroOriginal3" class="col-sm-2 control-label"></label>
 	<div class="col-sm-3">
-	  <input type="text" class="form-control" id="numeroOriginal3" placeholder="Número Original 3">
+	  <input type="text" class="form-control" id="numeroOriginal3" placeholder="Número Original 3" ng-model="peca.numeroOriginal">
 	</div>
   </div>
   
   <div class="form-group">
 	<label for="descricao" class="col-sm-2 control-label">Descrição</label>
 	<div class="col-sm-4">
-	  <textarea class="form-control" id="descricao" rows="3"></textarea>
+	  <textarea class="form-control" id="descricao" rows="3" ng-model="peca.descricao"></textarea>
 	</div>
   </div>
   
   <div class="form-group">
 	<label for="aplicacao" class="col-sm-2 control-label">Aplicação</label>
 	<div class="col-sm-4">
-	  <textarea class="form-control" id="aplicacao" rows="3"></textarea>
+	  <textarea class="form-control" id="aplicacao" rows="3" ng-model="peca.aplicacao"></textarea>
 	</div>
   </div>
   
   <div class="form-group">
 	<div class="col-sm-offset-2 col-sm-3">
-	  <button type="submit" class="btn btn-default btn-success">Concluir</button>
+	  <button type="submit" class="btn btn-default btn-success" ng-click="form.save();" >Concluir</button>
 	</div>
   </div>
 </form>

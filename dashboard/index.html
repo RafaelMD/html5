@@ -24,6 +24,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 	<script src="app.js"></script>
+	<script src="menuController.js"></script>
+	<script src="productController.js"></script>
+	<script src="productFormDirective.js"></script>
   </head>
 
   <body ng-app="dashboard">
@@ -75,8 +78,8 @@
                   <td>{{product.numeroJcrei}}</td>
                   <td>{{product.numeroOriginal}}</td>
                   <td>{{product.descricao}}</td>
-                  <td><a href="#" ng-click="products.edit(product.numeroJcrei);" >Editar</a></td>
-				  <td><a href="#" ng-click="products.delete(product.numeroJcrei);" >Excluir</a></td>
+                  <td><a href="#" ng-click="products.edit(product);" >Editar</a></td>
+				  <td><a href="#" ng-click="products.delete(product);" >Excluir</a></td>
                 </tr>
               </tbody>
             </table>
